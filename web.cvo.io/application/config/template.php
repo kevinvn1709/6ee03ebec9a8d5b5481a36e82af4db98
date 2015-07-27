@@ -9,14 +9,14 @@
 | "default" group).
 |
 */
-$template['active_template'] = 'master';
+$template['active_template'] = 'dashboard';
 
 /*
 |--------------------------------------------------------------------------
 | Explaination of template group variables
 |--------------------------------------------------------------------------
 |
-| ['template'] The filename of your master template file in the Views folder.
+| ['template'] The filename of your dashboard template file in the Views folder.
 |   Typically this file will contain a full XHTML skeleton that outputs your
 |   full template or region per region. Include the file extension if other
 |   than ".php"
@@ -27,8 +27,8 @@ $template['active_template'] = 'master';
 | ['parser'] The parser class/library to use for the parse_view() method
 |   NOTE: See http://codeigniter.com/forums/viewthread/60050/P0/ for a good
 |   Smarty Parser that works perfectly with Template
-| ['parse_template'] FALSE (default) to treat master template as a View. TRUE
-|   to user parser (see above) on the master template
+| ['parse_template'] FALSE (default) to treat dashboard template as a View. TRUE
+|   to user parser (see above) on the dashboard template
 |
 | Region information can be extended by setting the following variables:
 | ['content'] Must be an array! Use to set default region content
@@ -56,26 +56,38 @@ $template['active_template'] = 'master';
 |--------------------------------------------------------------------------
 */
 // Template for admin:
-$template['master']['template'] = 'template/master_template';
-$template['master']['regions'] = array(
+$template['dashboard']['template'] = 'template/dashboard_template';
+$template['dashboard']['regions'] = array(
     'head',
     'header',
     'breadcrumb',
     'content',
 );
-$template['master']['parser'] = 'parser';
-$template['master']['parser_method'] = 'parse';
-$template['master']['parse_template'] = FALSE;
+$template['dashboard']['parser'] = 'parser';
+$template['dashboard']['parser_method'] = 'parse';
+$template['dashboard']['parse_template'] = FALSE;
 
-$template['login']['template'] = 'template/login_template';
-$template['login']['regions'] = array(
+
+$template['authorize']['template'] = 'template/authorize_template';
+$template['authorize']['regions'] = array(
+    'head',
+    'header',
+    'breadcrumb',
+    'content',
+);
+$template['authorize']['parser'] = 'parser';
+$template['authorize']['parser_method'] = 'parse';
+$template['authorize']['parse_template'] = FALSE;
+
+$template['home']['template'] = 'template/home_template';
+$template['home']['regions'] = array(
     'logo',
     'breadcrumb',
     'header',
     'content',
 );
-$template['login']['parser'] = 'parser';
-$template['login']['parser_method'] = 'parse';
-$template['login']['parse_template'] = FALSE;
+$template['home']['parser'] = 'parser';
+$template['home']['parser_method'] = 'parse';
+$template['home']['parse_template'] = FALSE;
 /* End of file template.php */
 /* Location: ./system/application/config/template.php */
