@@ -10,6 +10,7 @@ class Register extends Core_Authorize_Controller {
         if (empty($user_info) == FALSE) {
             redirect(base_url('home'));
         }
+        $this->template->add_js('assets/authorize/js/custom/register.js');
         $this->template->parse_view('content', 'authorize/register', $this->data);
 
         $this->template->render();

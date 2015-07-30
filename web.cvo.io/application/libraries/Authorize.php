@@ -19,7 +19,6 @@ class Authorize {
         $link = $this->url . "/?control={$control}&func={$func}&" . http_build_query($params) . "&app={$this->app}&token={$token}";
         $json = $this->CI->Curl->get($link);
         $data = json_decode($json, TRUE);
-        MEAPI_Log::writeDB(array("{$control}_{$func}", $link, $json));
         return is_array($data) ? $data : FALSE;
     }
 

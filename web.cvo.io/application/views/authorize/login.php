@@ -8,9 +8,7 @@
                     <input style="display:none" type="submit" id="submit_btn">
                     <input type="password" style="display:none">
                     <!-- /fixes autocomplete off -->
-
                     <h2 class="signup-heading">Signin</h2>
-
                     <div class="row">
                         <div class="input-field col-md-12 col-sm-12 col-xs-12">
                             <i class="ion-coffee prefix"></i>
@@ -43,35 +41,37 @@
     </div>
 
 
-    <div class="modal fade" id="forgot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-         style="">
+    <div class="modal fade" id="forgot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="">
         <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel"><i class="ion-android-settings"></i> Reset password</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" placeholder="Enter Email here">
-                        <h6 class="note"><i class="ion-android-mail"></i> password will be sent to your email</h6>
+            <form id="forgot_form" class="col-md-12 col-sm-12 col-xs-12">
+                <input style="display:none" type="submit" id="submit_forgot_btn">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel"><i class="ion-android-settings"></i> Reset password</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-sm-12">
+                            <input type="text" name="forgot_email" id="forgot_email" class="form-control" placeholder="Enter Email here">
+                            <h6 class="note"><i class="ion-android-mail"></i> password will be sent to your email</h6>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-red" data-dismiss="modal">Close</button>
+                        <button id="forgot_btn" type="button" class="btn btn-primary">Send</button>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-red" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send</button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
-    
-    
+
+
     <div class="modal fade" id="my_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    Login Fail
+                    Signin Fail
                 </div>
                 <div class="modal-body">
                     Please check your account
