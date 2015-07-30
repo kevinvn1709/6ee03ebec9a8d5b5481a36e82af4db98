@@ -9,3 +9,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/authorize/css/signup.css">
 <!-- custom scrollbar stylesheet -->
 <link rel="stylesheet" type="text/css" href="/assets/authorize/css/style.css">
+<script>
+    var BASE_URL    =   '/';
+</script>

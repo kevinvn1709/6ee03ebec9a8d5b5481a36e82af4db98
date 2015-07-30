@@ -2,10 +2,10 @@
     <div class="row">
         <div class="right_block">
             <div class="row">
-                <form class="col-md-12 col-sm-12 col-xs-12">
+                <form id="authorize_form" class="col-md-12 col-sm-12 col-xs-12">
 
                     <!-- fixes autocomplete off -->
-                    <input style="display:none">
+                    <input style="display:none" type="submit" id="submit_btn">
                     <input type="password" style="display:none">
                     <!-- /fixes autocomplete off -->
 
@@ -14,12 +14,12 @@
                     <div class="row">
                         <div class="input-field col-md-12 col-sm-12 col-xs-12">
                             <i class="ion-coffee prefix"></i>
-                            <input id="icon_prefix-2" name="icon_prefix-2" type="text" class="validate">
-                            <label for="icon_prefix-2">Username</label>
+                            <input id="email" name="email" type="text" class="validate">
+                            <label for="icon_prefix-2">Email</label>
                         </div>
                         <div class="input-field col-md-12 col-sm-12 col-xs-12">
                             <i class="ion-key prefix"></i>
-                            <input id="icon_prefix-3" type="password" class="validate">
+                            <input id="password" name="password" type="password" class="validate">
                             <label for="icon_prefix-3">Password</label>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                             account</a>
                     </div>
                     <div class="clearfix"></div>
-                    <a href="#" class="btn btn-primary btn-block">Sign in</a>
+                    <a href="#" id="login_btn" class="btn btn-primary btn-block">Sign in</a>
                 </form>
             </div>
         </div>
@@ -61,6 +61,20 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-red" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="modal fade" id="my_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Login Fail
+                </div>
+                <div class="modal-body">
+                    Please check your account
                 </div>
             </div>
         </div>

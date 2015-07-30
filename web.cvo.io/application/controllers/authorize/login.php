@@ -10,6 +10,9 @@ class Login extends Core_Authorize_Controller {
         if (empty($user_info) == FALSE) {
             redirect(base_url('home'));
         }
+        
+        $this->template->add_js('assets/authorize/js/form-validation/jquery.form-validator.js');
+        $this->template->add_js('assets/authorize/js/custom/login.js');
         $this->template->parse_view('content', 'authorize/login', $this->data);
 
         $this->template->render();

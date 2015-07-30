@@ -8,7 +8,6 @@ class Core_Authorize_Controller extends CI_Controller {
         if ($this->is_login() == TRUE) {
             redirect(base_url('dashboard'));
         }
-
         $this->template->set_template('authorize');
         $this->template->parse_view('head', 'block/authorize/head', $this->data);
     }
