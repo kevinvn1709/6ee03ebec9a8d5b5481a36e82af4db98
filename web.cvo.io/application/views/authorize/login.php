@@ -23,6 +23,13 @@
                             <label for="icon_prefix-3">Password</label>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6">Or login with</div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 ti-align-right" style="text-align: right;">
+                            <a href="javascript:;" onclick="loginFacebook()">Facebook |</a>
+                            <a href="javascript:;" onclick="loginGoogle()">Google</a>
+                        </div>
+                    </div>
                     <div class="bottom_info">
                         <a href="#" class="pull-right" data-toggle="modal" data-target="#forgot">forgot password?</a>
                         <a href="<?php echo base_url('authorize/register'); ?>" class="pull-left">Register new
@@ -36,11 +43,13 @@
     </div>
 
 
-    <div class="modal fade" id="forgot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="">
+    <div class="modal fade" id="forgot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+         style="">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel"><i class="ion-android-settings"></i> Reset password</h4>
                 </div>
                 <div class="modal-body">

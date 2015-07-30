@@ -1,7 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: TRINM
- * Date: 7/30/15
- * Time: 10:36 PM
- */
+
+class Logout extends CI_Controller {
+    public function __construct() {
+        parent::__construct();
+    }
+
+    public function index() {
+        $this->session->sess_destroy();
+        redirect(base_url('authorize/login'));
+    }
+
+}

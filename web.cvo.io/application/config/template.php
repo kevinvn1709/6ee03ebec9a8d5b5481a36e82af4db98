@@ -61,6 +61,8 @@ $template['dashboard']['regions'] = array(
     'head',
     'header',
     'breadcrumb',
+    'sidebar_menu',
+    'profile',
     'content',
 );
 $template['dashboard']['parser'] = 'parser';

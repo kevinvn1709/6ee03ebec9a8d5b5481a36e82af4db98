@@ -15,9 +15,9 @@ class Core_Controller extends CI_Controller {
     }
 
     private function is_login() {
-        $user_info = $this->session->userdata('user_info');
-        $this->data['user_info'] = $user_info;
-        return empty($user_info) == TRUE ? FALSE : TRUE;
+        $account_info = $this->session->userdata('account_info');
+        $this->data['account_info'] = $account_info;
+        return empty($account_info) == TRUE ? FALSE : TRUE;
     }
 
 

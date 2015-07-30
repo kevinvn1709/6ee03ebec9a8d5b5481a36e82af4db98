@@ -3,12 +3,8 @@
     <!-- BEGIN LOGO -->
     <div class="page-logo">
         <a href="index.html">
-            <img src="/assets/img/logo-light.png" alt="logo" class="logo-default"/>
+            <img src="/assets/dashboard/img/logo-light.png" alt="logo" class="logo-default"/>
         </a>
-
-        <div class="menu-toggler sidebar-toggler">
-            <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
-        </div>
     </div>
     <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
        data-target=".navbar-collapse">
@@ -23,9 +19,9 @@
                 <li class="dropdown dropdown-user dropdown-dark">
                     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                        data-close-others="true">
-						<span class="username username-hide-on-mobile"></span>
+						<span class="username username-hide-on-mobile"><?php echo $account_info['full_name']; ?></span>
                         <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
-                        <img alt="" class="img-circle" src=""/>
+                        <img alt="" class="img-circle" src="<?php echo $account_info['avatar']; ?>"/>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-default">
                         <li>
@@ -33,7 +29,7 @@
                                 <i class="icon-user"></i> My Profile </a>
                         </li>
                         <li>
-                            <a href="login.html">
+                            <a href="<?php echo base_url('authorize/logout'); ?>">
                                 <i class="icon-key"></i> Log Out </a>
                         </li>
                     </ul>
